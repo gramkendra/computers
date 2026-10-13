@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRAMKENDRA COMPUTERS | CSC CENTRE</title>
+<meta name="description" content="GRAMKENDRA COMPUTERS - CSC Centre, Aadhaar Update, PAN Card, Voter Card, Ayushman Card, Bihar RTPS and Digital Services.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,"Segoe UI",sans-serif;background:#f5f9fd;color:#123567;line-height:1.5}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:94%;max-width:1450px;margin:auto}
+
+/* HEADER */
+.top-header{background:#fff;padding:9px 0;border-bottom:1px solid #dce8f4}
+.header-content{min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.main-logo{width:420px;height:86px;object-fit:contain}
+.brand-text{border-left:2px solid #dce6ef;padding-left:20px;min-width:220px}
+.brand-text h2{font-size:19px;color:#092e67}
+.brand-text p{font-size:12px;color:#526b89}
+.brand-text strong{color:#0879d8}
+.header-csc{text-align:center}
+.header-csc strong{display:block;font-size:36px;letter-spacing:2px;color:#164b88}
+.header-csc small{display:block;font-size:8px;font-weight:bold;color:#64748b}
+.digital-india{text-align:center}
+.digital-india .india-logo{font-size:32px;line-height:1}
+.digital-india strong{color:#11944c;font-size:12px}
+.header-contact{display:flex;align-items:center;gap:10px;color:#fff;padding:9px 16px;border-radius:35px;background:linear-gradient(135deg,#063777,#0874c9);box-shadow:0 7px 18px rgba(0,50,120,.18)}
+.whatsapp-icon{width:40px;height:40px;border-radius:50%;background:#19b957;display:grid;place-items:center;font-size:20px}
+.header-contact small{display:block;font-size:10px;opacity:.85}
+.header-contact strong{font-size:13px}
+
+/* NAV */
+.navbar{width:100%;background:linear-gradient(90deg,#06489d,#075dc5,#03285e);box-shadow:0 5px 18px rgba(0,35,90,.2);position:sticky;top:0;z-index:9999}
+.nav-container{width:100%;max-width:1450px;margin:auto;display:flex;align-items:center;justify-content:center}
+.nav-item{position:relative}
+.nav-main{height:50px;padding:0 16px;display:flex;align-items:center;justify-content:center;gap:7px;color:#fff;font-size:12px;font-weight:700;white-space:nowrap;border-right:1px solid rgba(255,255,255,.1);transition:.25s}
+.nav-main:hover,.nav-item:hover>.nav-main{background:#079de8}
+.nav-main span{font-size:8px;opacity:.8}
+.nav-item:first-child .nav-main{background:#079de8}
+.dropdown{position:absolute;top:50px;left:0;min-width:235px;background:#fff;border-radius:0 0 12px 12px;border:1px solid #dce8f5;box-shadow:0 18px 40px rgba(0,30,80,.22);overflow:hidden;opacity:0;visibility:hidden;transform:translateY(10px);transition:.2s}
+.nav-item:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.dropdown a{min-height:43px;display:flex;align-items:center;padding:10px 15px;color:#173d72;background:#fff;border-bottom:1px solid #edf2f7;font-size:12px;font-weight:600;transition:.2s}
+.dropdown a::before{content:"›";margin-right:10px;color:#0879d7;font-size:19px;font-weight:bold}
+.dropdown a:hover{color:#0565c5;background:#eef8ff;padding-left:21px}
+
+/* VIDEO HERO - ORIGINAL NEW DESIGN */
+.video-hero{position:relative;min-height:560px;overflow:hidden;background:#061a37;color:#fff}
+.video-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.video-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,16,40,.93) 0%,rgba(4,31,67,.72) 52%,rgba(4,18,45,.35) 100%),linear-gradient(0deg,rgba(2,12,32,.72),rgba(2,12,32,.05) 55%);z-index:1}
+.video-content{position:relative;z-index:2;min-height:560px;display:flex;align-items:center;padding:58px 0 78px}
+.hero-new{max-width:850px}
+.hero-kicker{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.10);border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.3px;backdrop-filter:blur(10px)}
+.hero-kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:#20d477;box-shadow:0 0 13px #20d477}
+.hero-new h1{font-size:clamp(42px,6vw,78px);line-height:.94;letter-spacing:-2.5px;margin:18px 0 15px;text-transform:uppercase;text-shadow:0 8px 30px rgba(0,0,0,.3)}
+.hero-new h1 span{display:block;font-size:.48em;letter-spacing:4px;color:#8ce3ff;margin-top:13px}
+.hero-line{width:92px;height:4px;border-radius:5px;background:#27a8ed;margin:20px 0}
+.hero-new p{max-width:690px;font-size:16px;line-height:1.7;color:#e5f1fb;margin-bottom:22px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.hero-tag{padding:8px 12px;border-radius:8px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.16);font-size:10px;font-weight:800;backdrop-filter:blur(8px)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:11px}
+.hero-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:9px;background:#0799e8;color:#fff;font-size:12px;font-weight:900;box-shadow:0 10px 28px rgba(0,126,221,.25);transition:.25s}
+.hero-action:hover{transform:translateY(-3px);background:#16a9f3}
+.hero-action.secondary{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px)}
+.hero-side{position:absolute;right:0;bottom:52px;width:285px;z-index:3;padding:18px;border:1px solid rgba(255,255,255,.20);border-radius:18px;background:rgba(4,25,55,.58);backdrop-filter:blur(14px);box-shadow:0 22px 55px rgba(0,0,0,.25)}
+.hero-side-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;font-size:11px;font-weight:900;color:#fff}
+.hero-side-head span{font-size:9px;color:#a9c7df}
+.hero-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hero-mini{padding:12px 9px;border-radius:11px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.10);font-size:9px;font-weight:800;color:#e9f7ff}
+.hero-mini b{display:block;font-size:19px;margin-bottom:5px}
+.hero-side-note{font-size:8px;color:#a9bed3;margin-top:11px;line-height:1.5}
+.sound-btn{position:absolute;z-index:5;right:22px;bottom:20px;border:1px solid rgba(255,255,255,.35);background:rgba(0,22,52,.72);color:#fff;border-radius:30px;padding:9px 14px;font-size:11px;font-weight:800;cursor:pointer;backdrop-filter:blur(7px)}
+.sound-btn:hover{background:rgba(5,101,180,.9)}
+.video-label{position:absolute;z-index:4;left:22px;bottom:20px;padding:8px 12px;border-radius:8px;background:rgba(0,20,50,.55);font-size:10px;color:#dcefff;border:1px solid rgba(255,255,255,.15)}
+
+/* SERVICES */
+.services{background:#fff;padding:35px 0 32px}
+.section-title{text-align:center;margin-bottom:23px}
+.section-title h2{font-size:29px;color:#0a3976;display:inline-block;position:relative;padding:0 65px}
+.section-title h2:before,.section-title h2:after{content:"";position:absolute;top:50%;width:55px;height:2px;background:#52afe9}
+.section-title h2:before{left:0}.section-title h2:after{right:0}
+.section-title p{font-size:11px;color:#57708e;margin-top:3px}
+.service-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.service-card{background:#fff;border:1px solid #e1ebf4;border-radius:15px;padding:15px 9px;text-align:center;box-shadow:0 6px 20px rgba(0,50,100,.08);transition:.25s;position:relative;overflow:hidden}
+.service-card:before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:#087be3}
+.service-card:hover{transform:translateY(-7px);box-shadow:0 17px 32px rgba(0,50,100,.15)}
+.service-icon{width:62px;height:62px;margin:0 auto 9px;display:grid;place-items:center;border-radius:50%;font-size:28px}
+.aadhaar{background:#fff4ce}.pan{background:#e4efff}.voter{background:#e0f7e8}.ayushman{background:#ffe5e5}.rtps{background:#f1e5ff}.certificate{background:#fff0d8}.online{background:#dcf6ff}
+.service-card h3{color:#143a70;font-size:12px;min-height:35px;display:flex;justify-content:center;align-items:center}
+.service-card p{color:#63748a;font-size:9px;line-height:1.45;min-height:39px;margin:5px 0 10px}
+.service-btn{display:inline-block;padding:7px 13px;border-radius:20px;color:#fff;background:#087be3;font-size:9px;font-weight:800}
+.green-btn{background:#13ad55}.red-btn{background:#f0444c}.purple-btn{background:#7736c7}.orange-btn{background:#f29a16}.cyan-btn{background:#079bc7}
+
+/* TRUST */
+.trust-bar{margin:15px auto 27px;padding:13px 8px;background:#edf8ff;border:1px solid #d8edf9;border-radius:13px;display:grid;grid-template-columns:repeat(5,1fr)}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:9px;border-right:1px solid #cbdfea}
+.trust-item:last-child{border-right:none}.trust-icon{font-size:24px}.trust-item strong{display:block;font-size:10px;color:#113d77}.trust-item small{display:block;color:#728197;font-size:8px}
+
+/* LOWER */
+.lower-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:15px;margin-bottom:28px}
+.info-box{background:#fff;border:1px solid #e1ebf4;border-radius:14px;padding:17px;box-shadow:0 5px 18px rgba(0,40,90,.06)}
+.info-box h3{color:#0b3975;font-size:16px;margin-bottom:2px}.info-sub{font-size:9px;color:#74849a;margin-bottom:12px}
+.quick-links{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.quick-link{padding:11px 6px;background:#f7fbff;border:1px solid #e1ebf4;border-radius:9px;text-align:center;font-size:11px;font-weight:800;color:#1460b2;transition:.2s}
+.quick-link:hover{background:#eaf6ff;transform:translateY(-2px)}
+.quick-link small{display:block;color:#718198;font-size:7px;font-weight:500;margin-top:2px}
+.about-text{color:#607189;font-size:10px;line-height:1.7}
+.about-btn{display:inline-block;margin-top:10px;background:#075db8;color:#fff;padding:7px 13px;border-radius:18px;font-size:9px;font-weight:800}
+.contact-row{display:flex;align-items:flex-start;gap:9px;margin:10px 0;color:#536b87;font-size:10px}
+.contact-icon{width:29px;height:29px;flex:0 0 29px;display:grid;place-items:center;border-radius:7px;background:#eef7ff;color:#0768c8;font-size:14px}
+.contact-row strong{display:block;color:#123d76;margin-bottom:1px}
+
+/* FOOTER */
+.footer{background:linear-gradient(135deg,#031d4d,#053d80);color:#b9cae1;padding:25px 0 14px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.12)}
+.footer-logo{width:170px;background:#fff;border-radius:8px;padding:5px;margin-bottom:8px}
+.footer-brand-text{font-size:9px;line-height:1.7;color:#a8bad2}
+.footer-col h4{color:#fff;font-size:12px;margin-bottom:9px}.footer-col a{display:block;color:#afc0d8;font-size:9px;margin:6px 0;transition:.2s}.footer-col a:hover{color:#fff;padding-left:4px}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:15px;padding-top:13px;font-size:8px;color:#91a6c2}
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+.header-csc,.digital-india{display:none}
+.service-grid{grid-template-columns:repeat(4,1fr)}
+.lower-grid{grid-template-columns:1fr 1fr}.info-box:first-child{grid-column:1/-1}
+.footer-grid{grid-template-columns:1.5fr 1fr 1fr}
+}
+@media(max-width:900px){
+.header-content{min-height:75px}.main-logo{width:280px;height:70px}.brand-text{display:none}
+.header-contact{padding:7px 11px}.header-contact strong{font-size:10px}.whatsapp-icon{width:33px;height:33px;font-size:18px}
+.nav-container{justify-content:flex-start;overflow-x:auto;scrollbar-width:none}.nav-container::-webkit-scrollbar{display:none}
+.nav-main{height:48px;padding:0 12px;font-size:10px}.dropdown{top:48px}
+.video-content{grid-template-columns:1fr;text-align:center;padding:45px 0}.video-left{padding:0}.video-points{justify-content:center}.hero-buttons{justify-content:center}.video-right{min-height:315px}.floating{display:none}
+.service-grid{grid-template-columns:repeat(3,1fr)}
+.trust-bar{grid-template-columns:repeat(2,1fr)}.trust-item{padding:8px;border-bottom:1px solid #cbdfea}
+.lower-grid{grid-template-columns:1fr}.info-box:first-child{grid-column:auto}
+}
+@media(max-width:600px){
+.main-logo{width:210px;height:62px}.header-contact{padding:6px 8px}.header-contact small{display:none}
+.video-hero,.video-content{min-height:620px}.video-left h1{font-size:34px}.video-subtitle{font-size:14px}
+.hero-logo-wrap{width:245px;height:245px}.hero-logo{width:190px;height:190px}.video-right{min-height:270px}
+.sound-btn{right:12px;bottom:14px}.video-label{left:12px;bottom:14px}
+.section-title h2{font-size:23px;padding:0 45px}.section-title h2:before,.section-title h2:after{width:38px}
+.service-grid{grid-template-columns:repeat(2,1fr)}
+.trust-bar{grid-template-columns:1fr}.trust-item{border-right:none}
+.quick-links{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:400px){
+.main-logo{width:180px}.header-contact{display:none}.service-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}
+}
+
+@media(max-width:1100px){.hero-side{position:relative;right:auto;bottom:auto;width:100%;max-width:560px;margin:28px 0 0}.video-content{display:block}.hero-new{max-width:900px}}
+@media(max-width:600px){.video-hero,.video-content{min-height:680px}.video-content{padding:45px 0 75px}.hero-new h1{font-size:43px;letter-spacing:-1.5px}.hero-new p{font-size:13px}.hero-side{margin-top:25px}.hero-mini{padding:10px 8px}.sound-btn{right:12px;bottom:14px}.video-label{left:12px;bottom:14px}}
+</style>
+</head>
+
+<body>
+
+<header class="top-header">
+<div class="container header-content">
+<img src="logo.png" alt="GRAMKENDRA COMPUTERS CSC CENTRE" class="main-logo">
+<div class="brand-text"><h2>Digital Seva</h2><p><strong>हर गाँव तक</strong><br>आपकी सुविधा, हमारा संकल्प !</p></div>
+<div class="header-csc"><strong>CSC</strong><small>COMMON SERVICE CENTRE</small></div>
+<div class="digital-india"><div class="india-logo">🇮🇳</div><strong>Digital India</strong></div>
+<a href="https://wa.me/7970934403" target="_blank" class="header-contact"><div class="whatsapp-icon">☎</div><div><strong>Contact / WhatsApp</strong><small>+91 797-093-4403</small></div></a>
+</div>
+</header>
+
+<nav class="navbar">
+<div class="nav-container">
+<div class="nav-item"><a href="index.html" class="nav-main">🏠 Home</a><div class="dropdown">
+<a href="index2.html">Home Page</a><a href="index3.html">Latest Updates</a><a href="index4.html">Our Services</a><a href="index5.html">Important Links</a><a href="index6.html">Notice Board</a><a href="index7.html">Contact Information</a></div></div>
+
+<div class="nav-item"><a href="#services" class="nav-main">🛠️ Services <span>▼</span></a><div class="dropdown">
+<a href="index8.html">Aadhaar Services</a><a href="index9.html">PAN Card Services</a><a href="index10.html">Voter Card Services</a><a href="index11.html">Ayushman Card</a><a href="index12.html">Bihar RTPS</a><a href="index13.html">Online Form Services</a></div></div>
+
+<div class="nav-item"><a href="#" class="nav-main">🛒 Service Order <span>▼</span></a><div class="dropdown">
+<a href="index14.html">Aadhaar Order</a><a href="index15.html">PAN Card Order</a><a href="index16.html">Voter Card Order</a><a href="index17.html">Ayushman Card Order</a><a href="index18.html">RTPS Certificate Order</a><a href="index19.html">Other Service Order</a></div></div>
+
+<div class="nav-item"><a href="#" class="nav-main">🌐 Our Site <span>▼</span></a><div class="dropdown">
+<a href="index20.html">Our Website</a><a href="index21.html">Our Services</a><a href="index22.html">Our Centre</a><a href="index23.html">Our Location</a><a href="index24.html">Photo Gallery</a><a href="index25.html">Customer Reviews</a></div></div>
+
+<div class="nav-item"><a href="#" class="nav-main">📄 Documents <span>▼</span></a><div class="dropdown">
+<a href="index26.html">Aadhaar Documents</a><a href="index27.html">PAN Documents</a><a href="index28.html">Voter Documents</a><a href="index29.html">RTPS Documents</a><a href="index30.html">Certificate Documents</a><a href="index31.html">Required Documents</a></div></div>
+
+<div class="nav-item"><a href="#" class="nav-main">🎧 Support <span>▼</span></a><div class="dropdown">
+<a href="index32.html">Help Center</a><a href="index33.html">How To Apply</a><a href="index34.html">Service Status</a><a href="index35.html">Payment Help</a><a href="index36.html">Complaint</a><a href="index37.html">Customer Support</a></div></div>
+
+<div class="nav-item"><a href="#" class="nav-main">👤 About Us <span>▼</span></a><div class="dropdown">
+<a href="index38.html">About Centre</a><a href="index39.html">Our Team</a><a href="index40.html">Our Mission</a><a href="index41.html">Our Vision</a><a href="index42.html">Why Choose Us</a><a href="index43.html">Contact Us</a></div></div>
+</div>
+</nav>
+
+<section class="video-hero">
+<video id="promoVideo" class="video-bg" autoplay muted loop playsinline preload="auto">
+<source src="promotion.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+<div class="video-overlay"></div>
+
+<div class="container video-content">
+  <div class="hero-new">
+    <div class="hero-kicker">CSC DIGITAL SEVA CENTRE • PAKRIBARAWAN</div>
+    <h1>GRAMKENDRA<br><span>COMPUTERS</span></h1>
+    <div class="hero-line"></div>
+    <p>सरकारी एवं ऑनलाइन सेवाओं के लिए एक ही जगह पर भरोसेमंद सहायता। Aadhaar, PAN, Voter, Ayushman, Bihar RTPS और कई अन्य डिजिटल सेवाएँ।</p>
+    <div class="hero-tags">
+      <span class="hero-tag">🪪 Aadhaar Update</span>
+      <span class="hero-tag">▣ PAN Card</span>
+      <span class="hero-tag">🗳️ Voter Card</span>
+      <span class="hero-tag">📄 Bihar RTPS</span>
+      <span class="hero-tag">💻 Online Forms</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#services" class="hero-action">सभी Services देखें →</a>
+      <a href="#contact" class="hero-action secondary">📞 Contact Centre</a>
+    </div>
+  </div>
+
+  <div class="hero-side">
+    <div class="hero-side-head"><span>हमारे यहाँ उपलब्ध</span><span>Digital Services</span></div>
+    <div class="hero-mini-grid">
+      <div class="hero-mini"><b><img src="Adhar.png" alt="Aadhaar Update"></b>Aadhaar</div>
+      <div class="hero-mini"><b>▣</b>PAN Card</div>
+   
+    </div>
+    <div class="hero-side-note">एक ही Centre • कई जरूरी सेवाएँ • सरल प्रक्रिया</div>
+  </div>
+</div>
+
+<div class="video-label">▶ PROMOTION VIDEO</div>
+<div class="video-label">▶ PROMOTION VIDEO</div>
+
+<button class="sound-btn" id="soundBtn" type="button">
+    🔇 Sound Off
+</button>
+
+<script>
+const video = document.getElementById("promoVideo");
+const soundBtn = document.getElementById("soundBtn");
+
+soundBtn.addEventListener("click", function () {
+
+    if (video.muted) {
+        video.muted = false;
+        video.volume = 1;
+        soundBtn.innerHTML = "🔊 Sound On";
+    } else {
+        video.muted = true;
+        soundBtn.innerHTML = "🔇 Sound Off";
+    }
+
+});
+</script>
+</section>
+
+<section class="services" id="services">
+<div class="container">
+<div class="section-title"><h2>Our Services</h2><p>Fast &nbsp;|&nbsp; Secure &nbsp;|&nbsp; Government Service Assistance</p></div>
+<div class="service-grid">
+
+<div class="service-card">
+    <div class="service-icon aadhaar">
+        <img src="Adhar.png" alt="Aadhaar Update">
+    </div>
+
+    <h3>Aadhaar Demographic Update</h3>
+    <p>Name, Address, DOB, Gender, Mobile Number Update</p>
+    <a href="index8.html" class="service-btn">View Details →</a>
+</div>
+<div class="service-card">
+    <div class="service-icon pan">
+        <img src="Pan.png" alt="PAN Card">
+    </div>
+    <h3>PAN Card</h3>
+    <p>New PAN, Reprint, Correction & e-PAN</p>
+    <a href="index9.html" class="service-btn">View Details →</a>
+</div>
+
+<div class="service-card">
+    <div class="service-icon voter">
+        <img src="Votercard.png" alt="Voter Card">
+    </div>
+    <h3>Voter Card</h3>
+    <p>New Registration, Correction, Replacement</p>
+    <a href="index10.html" class="service-btn green-btn">View Details →</a>
+</div>
+
+<div class="service-card">
+    <div class="service-icon ayushman">
+        <img src="Ayusman.png" alt="Ayushman Card">
+    </div>
+    <h3>Ayushman Card</h3>
+    <p>Ayushman Bharat Health Card Assistance</p>
+    <a href="index11.html" class="service-btn red-btn">View Details →</a>
+</div>
+
+<div class="service-card">
+    <div class="service-icon rtps">
+        <img src="Rtps.png" alt="Bihar RTPS">
+    </div>
+    <h3>Bihar RTPS</h3>
+    <p>Residence, Caste, Income, EWS & Certificate</p>
+    <a href="index12.html" class="service-btn purple-btn">View Details →</a>
+</div>
+
+<div class="service-card">
+    <div class="service-icon certificate">
+        <img src="Certificate.png" alt="Certificate Services">
+    </div>
+    <h3>Certificate Services</h3>
+    <p>Income, Certificate, Caste, Domicile & Others</p>
+    <a href="index30.html" class="service-btn orange-btn">View Details →</a>
+</div>
+
+<div class="service-card">
+    <div class="service-icon online">
+        <img src="Online.png" alt="Online Form Services">
+    </div>
+    <h3>Online Form Services</h3>
+    <p>Railway, SSC, Police, Banking & Many More</p>
+    <a href="index13.html" class="service-btn cyan-btn">View Details →</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<div class="container">
+<div class="trust-bar">
+<div class="trust-item"><div class="trust-icon">🌐</div><div><strong>Official Website Links</strong><small>Direct to Govt. Portals</small></div></div>
+<div class="trust-item"><div class="trust-icon">👨‍💼</div><div><strong>Expert Assistance</strong><small>Friendly & Professional</small></div></div>
+<div class="trust-item"><div class="trust-icon">💳</div><div><strong>Digital Payment</strong><small>UPI / Cash / Card</small></div></div>
+<div class="trust-item"><div class="trust-icon">🛡️</div><div><strong>Secure & Safe</strong><small>Your Data Our Priority</small></div></div>
+<div class="trust-item"><div class="trust-icon">🕐</div><div><strong>Time Saving</strong><small>Quick & Hassle Free</small></div></div>
+</div>
+</div>
+🕐 Rahul
+<div class="running-text">
+    <div class="running-content">
+        <span>🌟 Gramkendra Computers में आपका स्वागत है</span>
+        <span>📢 हमारी मुख्य सेवाएं:</span>
+        <span>📝 Public Grievances</span>
+        <span>🚗 Road Tax Payment</span>
+        <span>📂 Digi-Locker</span>
+        <span>🏛️ e-District Services</span>
+        <span>🪪 PAN Card</span>
+        <span>🆔 Aadhaar Card</span>
+        <span>🌐 Passport</span>
+        <span>👴 Jeevan Praman</span>
+        <span>🍴 FSSAI Registration</span>
+        <span>💰 NPS</span>
+        <span>📜 Lokaseba Adhikar</span>
+        <span>🚦 Traffic Challan</span>
+        <span>🏢 CSC Services</span>
+        <span>🗳️ Voter ID Services</span>
+        <span>🏦 Banking Services</span>
+        <span>💳 AEPS Services</span>
+        <span>📱 Mobile & DTH Recharge</span>
+        <span>💡 Electricity Bill Payment</span>
+        <span>🎓 Online Form & Education Services</span>
+        <span>🌾 Agriculture Services</span>
+        <span>🏥 Health & Insurance Services</span>
+        <span>📄 Certificate & Online Application Services</span>
+    </div>
+</div>
+
+<style>
+.running-text {
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg, #075985, #0ea5e9, #7c3aed, #db2777);
+    padding: 12px 0;
+    white-space: nowrap;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.running-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: runningText 35s linear infinite;
+}
+
+.running-content span {
+    display: inline-block;
+    margin-right: 55px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.running-content span:nth-child(3n) {
+    color: #fde047;
+}
+
+.running-content span:nth-child(3n+1) {
+    color: #ffffff;
+}
+
+.running-content span:nth-child(3n+2) {
+    color: #bbf7d0;
+}
+
+@keyframes runningText {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .running-content span {
+        font-size: 15px;
+        margin-right: 35px;
+    }
+}
+</style>rkc
+
+<!-- ================= ALL CSC SERVICES ================= -->
+
+<div class="all-csc-box">
+
+    <a href="service-list.html" class="all-csc-title">
+        <span class="new-badge">NEW</span>
+        <span class="csc-icon">✦</span>
+        <strong>ALL CSC SERVICES</strong>
+        <span class="csc-arrow">→</span>
+    </a>
+
+    <div class="csc-running">
+        <div>
+            ➜ हमारी सभी Service List देखने के लिए यहाँ क्लिक करें
+            &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;
+            सभी CSC एवं Digital Services की जानकारी यहाँ देखें
+        </div>
+    </div>
+
+</div>
+
+
+<style>
+
+/* ================= ALL CSC SERVICES ================= */
+
+.all-csc-box{
+    width:100%;
+    max-width:650px;
+    margin:12px auto;
+
+    background:#ffffff;
+
+    border:1px solid #e1e6ec;
+    border-radius:7px;
+
+    box-shadow:0 3px 12px rgba(20,40,60,.07);
+
+    overflow:hidden;
+}
+
+
+/* MAIN CLICK BUTTON */
+
+.all-csc-title{
+    min-height:38px;
+
+    display:flex;
+    align-items:center;
+
+    gap:8px;
+
+    padding:7px 11px;
+
+    text-decoration:none;
+
+    background:#fff;
+
+    color:#173b60;
+
+    transition:.2s;
+}
+
+.all-csc-title:hover{
+    background:#f7fafc;
+}
+
+
+/* NEW */
+
+.new-badge{
+    background:#e51d3f;
+    color:#fff;
+
+    font-size:7px;
+    font-weight:900;
+
+    padding:3px 5px;
+
+    border-radius:3px;
+
+    line-height:1;
+}
+
+
+/* STAR ICON */
+
+.csc-icon{
+    color:#e51d3f;
+    font-size:14px;
+}
+
+
+/* TEXT */
+
+.all-csc-title strong{
+    font-size:12px;
+    letter-spacing:.3px;
+
+    flex:1;
+}
+
+
+/* ARROW */
+
+.csc-arrow{
+    color:#e51d3f;
+    font-size:14px;
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.all-csc-title:hover .csc-arrow{
+    transform:translateX(4px);
+}
+
+
+/* ================= RUNNING TEXT ================= */
+
+.csc-running{
+    width:100%;
+
+    height:22px;
+
+    overflow:hidden;
+
+    background:#f5f7f9;
+
+    border-top:1px solid #edf0f3;
+
+    color:#68788a;
+
+    font-size:8px;
+
+    line-height:22px;
+
+    white-space:nowrap;
+}
+
+.csc-running div{
+    display:inline-block;
+
+    padding-left:100%;
+
+    animation:cscScroll 18s linear infinite;
+}
+
+@keyframes cscScroll{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-100%);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .all-csc-box{
+        width:94%;
+        margin:10px auto;
+    }
+
+    .all-csc-title{
+        min-height:35px;
+        padding:6px 9px;
+    }
+
+    .all-csc-title strong{
+        font-size:11px;
+    }
+
+    .csc-running{
+        font-size:7px;
+        height:20px;
+        line-height:20px;
+    }
+
+}
+
+</style>
